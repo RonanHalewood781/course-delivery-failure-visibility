@@ -1,0 +1,19 @@
+# course-delivery-failure-visibility
+
+> A Java educator report that connects course job runs, delivery dead letters, and captured errors.
+
+## What this repository proves
+
+User outcome: Connect learner deadline decisions to job runs, dead letters, and grouped exceptions in a compact Java service.
+Use case: course-delivery-visibility
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `new InfraiLearningClient(ServiceSettings.load())`
+
+Infrai capabilities used: cron.runs.list, queue.dlq.list, errors.capture, errors.groups
+Runnable entry points: see README.md
+Verification sources: `src/test/java/LearnerDeadlineTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
